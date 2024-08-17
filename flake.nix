@@ -1,7 +1,7 @@
 {
   description = "Declarative web app manager for home-manager";
 
-  outputs = {
+  outputs = _: {
     homeManagerModules.default = import ./modules/home-manager.nix;
   };
 }
