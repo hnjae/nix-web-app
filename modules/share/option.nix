@@ -7,7 +7,7 @@
   typeExecutor = types.submodule {
     options = {
       binary = mkOption {
-        type = types.path;
+        type = types.either types.path types.nonEmptyStr;
         description = ''
           The binary to run the web app. This must be a Chromium-based browser
           and should support the `user-data-dir` and `app` flags.
