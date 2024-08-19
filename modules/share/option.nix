@@ -3,7 +3,7 @@
   pkgs,
   ...
 }: let
-  inherit (lib) mkOption mkEnableOption types;
+  inherit (lib) mkOption types;
   typeExecutor = types.submodule {
     options = {
       binary = mkOption {
@@ -58,7 +58,6 @@
     };
   };
 in {
-  enable = mkEnableOption "enable web-app";
   executor = mkOption {
     type = typeExecutor;
     default = {
