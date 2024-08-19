@@ -76,6 +76,7 @@ in {
     };
   };
   apps = mkOption {
+    default = [];
     type = types.listOf (
       types.submodule {
         options = {
